@@ -14,7 +14,7 @@ export default function () {
     const loginResponse = loginRequest(Payloads.login);
     validateLoginResponse(loginResponse);
 
-    const body = loginRequest.json();
+    const body = loginResponse.json();
     const token = body.data.token;
 
     const profileResponse = getprofileRequest(token);
