@@ -4,8 +4,8 @@ export const Payloads = {
         "password": "P@ssword"
     },
 
-    testmonial: {
-        "Title": "Ndivhuwo Tshiedza Testimonial",
+    testimonial: {
+        "title": "Ndivhuwo Tshiedza Testimonial",
         "content": "This is a testimonial for Ndivhuwo Tshiedza. He is a great person and a good friend.",
         "rating": 5,
         "isPublic": true

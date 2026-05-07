@@ -22,25 +22,27 @@ export default function () {
     const token = body.data.token;
     console.log(`Extracted token: ${token}`);
 
-    sleep(1); // Simulate user think time
 
     const testimonialResponse = postTestimonialRequest(token, Payloads.testimonial);
-    sleep(1); // Simulate user think time
-    console.log(`Sending payload:`, JSON.stringify(Payloads.testmonial, null, 2));    
+    console.log(`Sending payload:`, JSON.stringify(Payloads.testimonial, null, 2));    
     const bodyTestimonial = testimonialResponse.json();
     console.log(`Testimonial response status: ${testimonialResponse.status}`);
     console.log(`Testimonial response body: ${testimonialResponse.body}`);
     console.log(`Parsed testimonial body:`, JSON.stringify(bodyTestimonial, null, 2));
 
-    if (!bodyTestimonial || !bodyTestimonial.data || !bodyTestimonial.data.id) {
-        console.error('Testimonial response does not contain expected data.id');
+    if (!bodyTestimonial || !bodyTestimonial.data || !bodyTestimonial.data.Id) {
+        console.error('Testimonial response does not contain expected data.Id');
         console.error('Response structure:', bodyTestimonial);
         return;
     }
 
-   // const idTest = bodyTestimonial.data.id;
+    const idTest = bodyTestimonial.data.Id;
 
-   // const updateResponse = updateTestimonialRequest(token, idTest, Payloads.updateTestimonial);
+    const updateResponse = updateTestimonialRequest(token, idTest, Payloads.updateTestimonial);
+    console.log(`Update testimonial response status: ${updateResponse.status}`);
+    console.log(`Update testimonial response body: ${updateResponse.body}`);
 
-   // const deleteResponse = deleteTestimonialRequest(token, idTest);
+    const deleteResponse = deleteTestimonialRequest(token, idTest);
+    console.log(`Delete testimonial response status: ${deleteResponse.status}`);
+    console.log(`Delete testimonial response body: ${deleteResponse.body}`);
 }

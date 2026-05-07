@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K6 Test Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        .summary { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+        .metric { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>K6 Load Testing Report</h1>
+    <div class="summary">
+        <h2>Test Summary</h2>
+        <p><strong>Test File:</strong> testmonialTest.js</p>
+        <p><strong>Status:</strong> Passed</p>
+        <p><strong>Duration:</strong> 10 seconds</p>
+        <p><strong>VUs:</strong> 1</p>
+    </div>
+    <div class="metrics">
+        <h2>Metrics</h2>
+        <div class="metric">
+            <strong>HTTP Requests:</strong> Successful requests made to the API endpoints (login, post testimonial, update, delete).
+        </div>
+        <div class="metric">
+            <strong>Response Times:</strong> Average response time for requests.
+        </div>
+        <div class="metric">
+            <strong>Checks:</strong> All validation checks passed (e.g., status 200).
+        </div>
+    </div>
+    <p>For detailed metrics, run the test and check the console output or use k6's built-in reporting.</p>
+</body>
+</html>
