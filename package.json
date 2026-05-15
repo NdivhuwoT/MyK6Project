@@ -5,7 +5,5 @@
   "scripts": {
     "test": "k6 run Tests/testmonialTest.js"
   },
-  "devDependencies": {
-    "k6-html-reporter": "^1.0.0"
-  }
+  "devDependencies": {}
 }
